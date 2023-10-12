@@ -37,33 +37,28 @@ function fight(player1, player2, player1Health, player2Health) {
   }
 }
 
-// fight("Teddy", "Autumn", 100, 100);
+fight("Teddy", "Autumn", 100, 100);
 
 // Extended Challenge
 const getGrade = (num) => {
+  let grade;
   switch (true) {
     case num >= 90:
-      console.log("A");
+      grade = "A";
       break;
     case num >= 80:
-      console.log("B");
+      grade = "B";
       break;
     case num >= 70:
-      console.log("C");
+      grade = "C";
       break;
     case num >= 60:
-      console.log("D");
+      grade = "D";
       break;
     default:
-      console.log("F");
+      grade = "F";
   }
 };
-getGrade(99);
-getGrade(88);
-getGrade(77);
-getGrade(66);
-getGrade(55);
-
 const prioritize = (urgent, important) => {
   if (urgent && important) {
     return 1;
