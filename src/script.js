@@ -76,7 +76,7 @@ const prioritize = (urgent, important) => {
 
 const calculatePay = (wage, hours) => {
   // Normal Pay
-  let paycheck = 40 * wage;
+  let paycheck = hours * wage;
   if (hours <= 40) return paycheck;
 
   // Normal Pay + Overtime Pay
