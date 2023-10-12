@@ -7,11 +7,11 @@ const chooseOption = (opt1, opt2) => {
   let randNum = Math.floor(Math.random() * 2) + 0;
   return randNum === 0 ? opt1 : opt2;
 };
-function attackPlayer(health) {
+const attackPlayer = function(health) {
   return health - randomDamage();
 }
 const logHealth = (player, health) =>
-  console.log(`${player} health: ${health}`);
+  console.log(`${player}'s health: ${health}`);
 
 const logDeath = (winner, loser) => console.log(`${winner} defeated ${loser}`);
 const isDead = (health) => health <= 0;
@@ -60,6 +60,8 @@ const getGrade = (num) => {
   }
   return grade;
 };
+// Many if else ternary operator
+// return grade >= 90 ? "A" : grade >= 80 ? "B" : grade >= 70 ? "C" : grade >= 60 ? "D" : "F" :
 const prioritize = (urgent, important) => {
   if (urgent && important) {
     return 1;
@@ -73,8 +75,11 @@ const prioritize = (urgent, important) => {
 };
 
 const calculatePay = (wage, hours) => {
+  // Normal Pay
   let paycheck = 40 * wage;
   if (hours <= 40) return paycheck;
+
+  // Normal Pay + Overtime Pay
   const overTimeWage = wage * 1.5;
   const extra = hours - 40;
   paycheck += extra * overTimeWage;
