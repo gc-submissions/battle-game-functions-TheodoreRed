@@ -58,6 +58,7 @@ const getGrade = (num) => {
     default:
       grade = "F";
   }
+  return grade;
 };
 const prioritize = (urgent, important) => {
   if (urgent && important) {
